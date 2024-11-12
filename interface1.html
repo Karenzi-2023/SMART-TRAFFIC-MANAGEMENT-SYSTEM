@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Traffic Management System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: maroon;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .header {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header text-center">
+        <h1>Smart Traffic Management System</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Live Traffic Data</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Location</th>
+                                <th>Traffic Volume</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>kabale main town</td>
+                                <td>1200 vehicles/h</td>
+                                <td class="text-success">Normal</td>
+                            </tr>
+                            <tr>
+                                <td>rubanda</td>
+                                <td>180 vehicles/h</td>
+                                <td class="text-warning">Congested</td>
+                            </tr>
+                            <tr>
+                                <td>rukiga</td>
+                                <td>100 vehicles/h</td>
+                                <td class="text-danger">Blocked</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Traffic Alerts</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-danger">Accident reported at Main St</li>
+                        <li class="list-group-item list-group-item-warning">Heavy traffic near downtown</li>
+                        <li class="list-group-item list-group-item-success">Road construction on 4th Ave completed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>System Controls</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="location">Select Location</label>
+                            <select class="form-control" id="location">
+                                <option>kirigime</option>
+                                <option>kabale main town</option>
+                                <option>rubanda</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="action">Action</label>
+                            <select class="form-control" id="action">
+                                <option>Change Signal Timing</option>
+                                <option>Send Alert</option>
+                                <option>Request Maintenance</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Execute</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Analytics</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for data visualization -->
+</head>
+<body>
+    <!-- Include Navbar -->
+    <?php include 'navbar.html'; ?>
+
+    <div class="container mt-5">
+        <h1>Traffic Analytics</h1>
+        <canvas id="trafficChart" width="400" height="200"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('trafficChart').getContext('2d');
+        const trafficChart = new Chart(ctx, {
+            type: 'line', // Line chart for traffic flow over time
+            data: {
+                labels: ['6 AM', '9 AM', '12 PM', '3 PM', '6 PM', '9 PM'], // Example time intervals
+                datasets: [{
+                    label: 'Traffic Volume',
+                    data: [1200, 1500, 1700, 1300, 1000, 700], // Example data
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                title: { display: true, text: 'Traffic Volume Over Time' },
+                scales: { yAxes: [{ ticks: { beginAtZero: true } }] }
+            }
+        });
+    </script>
+</body>
+</html>

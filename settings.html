@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Include Navbar -->
+    <?php include 'navbar.html'; ?>
+
+    <div class="container mt-5">
+        <h1>Settings</h1>
+        <form>
+            <div class="form-group">
+                <label for="alertThreshold">Alert Threshold</label>
+                <input type="number" class="form-control" id="alertThreshold" placeholder="Enter vehicle limit for alerts">
+            </div>
+            <div class="form-group">
+                <label for="signalTiming">Signal Timing Adjustment (seconds)</label>
+                <input type="number" class="form-control" id="signalTiming" placeholder="Enter signal timing adjustment">
+            </div>
+            <button type="submit" class="btn btn-primary">Save Settings</button>
+        </form>
+    </div>
+</body>
+</html>
